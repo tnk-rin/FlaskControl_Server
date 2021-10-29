@@ -58,7 +58,7 @@ def main():
             pattern = int(args.pattern)
 
         if not args.colpattern:
-            colorWipe(strip, Color(int(strlist[0]), int(strlist[1]), int(strlist[2])), pattern, True)  # Orange
+            colorWipe(strip, Color(int(int(strlist[0])*(int(args.brightness)/100)), int(int(strlist[1])*(int(args.brightness)/100)), int(int(strlist[2])*(int(args.brightness)/100))), pattern, True)  # Orange
         elif args.colpattern:
             #Split color pattern into individual colors 'r,g,b','r,g,b'
             colors = args.colpattern.split('_')
